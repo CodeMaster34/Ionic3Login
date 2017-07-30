@@ -1,0 +1,38 @@
+﻿<ion-content class="login">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 text-center>
+        <img src="./assets/logo.png" />
+      </ion-col>
+    </ion-row>
+    <ion-row class="main">
+
+
+      <ion-col col-12>
+        <ion-item>
+          <ion-label floating>Name & Surname</ion-label>
+          <ion-input type="text" [(ngModel)]="user.namesurname"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12 text-center>
+        <button ion-button color="secondary" (click)="register(user)" [disabled]="!user.username || !user.password">Register</button>
+      </ion-col>
+      <ion-col col-12 text-center>
+        <span class="registerbtn" (click)="gologinpage()">Are you already user?</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
